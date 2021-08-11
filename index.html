@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Attendance</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="themed" id="header">
+        <h2 id="appName" class="centred">Attendance</h2>
+        <div id="headerRight" class="centered">
+            <p class="centred" id="todoTag">All</p>
+            <button id="settings" class = "themed centred round"><i class="fas fa-ellipsis-v scale"></i></button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="mainContent" >
+        <!-- content boilerplate-->
+        <!-- <div class="nonThemed todoContainer">
+            <div class="percentContainer">
+                <p id="todoTitle" class="centred">Subject</p>
+                <p id="Fraction">3/4</p>
+            </div>
+            <div  class="buttons">
+                <button id="increase-$className" onclick="" class="done themed round"><i class="fas fa-check scale"></i></button>
+                <button id="decrease-$className" onclick="" class="done themed round red"><i class="fas fa-times scale"></i></button>
+                <button id="mistakes-$className" onclick="" class="done themed round"><i class="fas fa-reply scale"></i></button>
+            </div>
+        </div> -->
+    </main>
+    <!-- modals -->
+    <!-- register modal -->
+    <div id="registerModal" class="modalContainer">
+        <div class="modal">
+            <fieldset id="registerField">
+                <legend>
+                    Register
+                </legend>
+                <input type="text" placeholder="Username" id="registerUsername">
+                <input type="text" placeholder="Gist Id" id="registerGistId">
+                <input type="text" placeholder="O-Auth Token" id="registerGistToken">
+                <button id="registerButton" class="textButton themed">Resgister</button>
+            </fieldset>
+        </div>
+    </div>
+    <!-- add new task modal -->
+    <div id="revert" class="modalContainer">
+        <div id="revertModal" class="modal">
+            <fieldset>
+                <legend>
+                    Revert Action
+                </legend>
+                <div id="insideRevert">
+                    <button id="correct" class="textButton themed round"><i class="fas fa-check scale"></i></button>
+                    <button id="wrong" class="textButton themed round red"><i class="fas fa-times scale"></i></button>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
