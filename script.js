@@ -17,7 +17,9 @@ window.addEventListener("load", (event) => {
         register();
         hideModal("registerModal");
     });
-
+    document.getElementById('settings').addEventListener('click',()=>{
+        document.getElementById('registerModal').style.visibility = 'visible';
+    });
     // setup
     if (localStorage.getItem("AttObj") == null) {
         //setlastUpdate in registerItelf
