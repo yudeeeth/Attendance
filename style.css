@@ -81,7 +81,7 @@ h2,p{
 .todoContainer{
     border-radius: 0.5rem;
     margin:0.25rem;
-    min-width: 350px;
+    min-width: 320px;
     background-color:var(--nonThemePrimary);
 }
 
