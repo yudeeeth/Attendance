@@ -25,7 +25,7 @@ window.addEventListener("load", (event) => {
         //setlastUpdate in registerItelf
         document.getElementById("registerModal").style.visibility = "visible";
     } else {
-        GistId = localStorage.getItem("GistId");
+        GistId = localStorage.getItem("AttGistId");
         GistToken = localStorage.getItem("GistToken");
         getData();
     }
@@ -44,7 +44,7 @@ const sync = (destination) => {
         localStorage.setItem("AttObj", `${JSON.stringify(AttObj)}`);
         // localStorage.setItem("lastSync", `${new Date().getTime()}`);
     } else {
-        let Filename = localStorage.getItem("filename");
+        let Filename = localStorage.getItem("Attfilename");
         console.debug(Filename);
         axios
             .patch(
@@ -137,9 +137,8 @@ const register = () => {
     GistToken = document.getElementById("registerGistToken").value;
     // validate step here
     localStorage.setItem("username", username);
-    localStorage.setItem("GistId", GistId);
+    localStorage.setItem("AttGistId", GistId);
     localStorage.setItem("GistToken", GistToken);
-    localStorage.setItem("lastSync", `${new Date().getTime()}`);
     //simulate request
     getData();
 };
@@ -161,7 +160,7 @@ const getData = () => {
             console.debug(res);
             //assing res to AttObj
             let Filename = Object.keys(res.data.files)[0];
-            localStorage.setItem("filename", Filename);
+            localStorage.setItem("Attfilename", Filename);
             AttObj = JSON.parse(res.data.files[Filename].content);
             sync("local");
             renderTodo();
